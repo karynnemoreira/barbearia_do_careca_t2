@@ -1,3 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: cornflowerblue;
+}
+
+
 img{
-    width: 10%;
+    width: 15%;
+}
+
+nav{
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+}
+
+ul{
+    /* border: solid red; */
+    width: 50%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li{
+    font-size: 1.5rem;
+}
+
+
+
+/* Estilização da main */
+
+.card{
+    border: solid ;
+    width: 30%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.cortes{
+     width: 50%;
+}
+
+button{
+    width: 30%;
+    height: 5vh;
 }

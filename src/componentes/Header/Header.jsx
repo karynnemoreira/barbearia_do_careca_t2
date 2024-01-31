@@ -1,18 +1,14 @@
 import React from "react";
-import Logo from "./barbearia.png"
-import Coragem from "../../assets/coragem.jpg"
 import "../../App.css"
+import Logo from "./barbearia.png"
+import Coragem from "../../assets/coragem.jpg" //Pegando imagem pela a pasta assets
 
 
 function Header() {
     return (
-        <>
+        <header>
             <nav>
-
-                <img src={Logo} alt="Logo da barbearia do careca" />
-
-                
-                 <img src={Coragem} alt="" />  
+             <img src={Logo} alt="" />
 
                 {/* <img src="https://img.freepik.com/vetores-premium/modelo-de-logotipo-vintage-de-barbearia_441059-26.jpg" alt="Logo da barbearia do careca" /> */}
                 <ul>
@@ -22,7 +18,7 @@ function Header() {
                     <li>Sobre</li>
                 </ul>
             </nav>
-        </>
+        </header>
     )
 }
 
