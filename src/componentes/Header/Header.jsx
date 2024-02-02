@@ -3,7 +3,6 @@ import "../../App.css"
 import Logo from "./barbearia.png"
 import Coragem from "../../assets/coragem.jpg" //Pegando imagem pela a pasta assets
 
-
 function Header() {
     return (
         <header>
@@ -17,6 +16,7 @@ function Header() {
                     <li>Unidades</li>
                     <li>Sobre</li>
                 </ul>
+               
             </nav>
         </header>
     )

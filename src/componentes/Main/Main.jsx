@@ -1,18 +1,62 @@
-import React from "react"
+import React, { useState } from "react" //chamando o hook useState
+import Imgcareca1 from "./careca.jpg" //importado imagem da pasta main
+import Imgcareca2 from "../../assets/careca2.jpg" //importando imagem da pasta assets
+import Carrinho from "./carrinho.png"
 
-function Main(){
-    return(
-       <main> 
+function Main() {
 
-        <div className="card">
-           <img className="cortes" src="https://i.pinimg.com/474x/f0/03/6b/f0036beb698e0839c61689a3ad598b46.jpg" alt="" /> 
-           <h3>R$ 50,00</h3>
-           <button>AGENDE AGORA</button>
-        </div>
+   //1º criar uma const
+   //2º criar uma array [] que vai guardar duas coisas, dois parâmetros. [estado, setEstado ]
+   //3º receber =  o hook useState()
+   //4º dentro do () colocar o valor inicial (0) ("Karynne") ("batata") (2020)
+
+   const [numero, setNumero] = useState(0)
+   // const [a coisa, habilidade de mudar essa coisa ] = useState(valor inicial)
+
+   //Utilizando função
+   //  function Adicionar(){
+   //    setNumero(numero + 1)
+   // }
+
+   //Arrow function - caso queiram estudar um pouco sobre o assunto
+
+   //-----SEM CONDIÇÃO
+   //  const Adicionar = () => {
+   //    setNumero(numero + 1)
+   // }
+
+   //---COM CONDIÇÃO
+   const Adicionar = () => {
+      if (numero < 10) {
+         setNumero(numero + 1)
+      }
+   }
 
 
-       </main>
-    )
+
+   return (
+      <main>
+         <div className="card">
+            <img className="cortes" src={Imgcareca1} alt="" />
+            <h3>R$ 50,00</h3>
+            <button onClick={Adicionar}>Agendar  <img src={Carrinho} alt=""/></button>
+
+           
+
+            <h2> {numero} </h2>
+         </div>
+
+
+
+         <div className="card">
+            <img className="cortes" src={Imgcareca2} alt="" />
+            <h3>R$ 50,00</h3>
+            <img src={Carrinho} alt="" onClick={Adicionar}/>
+
+            <h2> {numero} </h2>
+         </div>
+      </main>
+   )
 }
 
 export default Main
