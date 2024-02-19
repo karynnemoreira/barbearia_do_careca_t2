@@ -1,25 +1,25 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-header{
+header {
     background-color: cornflowerblue;
 }
 
 
-img{
+img {
     width: 15%;
 }
 
-nav{
-     display: flex;
-     align-items: center;
-     justify-content: space-around;
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-ul{
+ul {
     /* border: solid red; */
     width: 50%;
     list-style: none;
@@ -27,7 +27,7 @@ ul{
     justify-content: space-evenly;
 }
 
-li{
+li {
     font-size: 1.5rem;
     cursor: pointer;
     color: white;
@@ -35,15 +35,15 @@ li{
 
 li:hover {
     background: linear-gradient(#b92a03ec, #0f005d);
-  }
-  
+}
+
 
 
 
 /* Estilização da main */
 
-.card{
-    border: solid ;
+.card {
+    border: solid;
     width: 25%;
     height: 60vh;
     display: flex;
@@ -53,36 +53,53 @@ li:hover {
     border-radius: 20px;
 }
 
-.cortes{
-     width: 50%;
+.cortes {
+    width: 50%;
 }
 
-button{
-    font-size:15px;
-  font-family:Arial;
-  width:140px;
-  height:50px;
-  border-width:1px;
-  color:#fff;
-  border-color:#337bc4;
-  font-weight:bold;
-  border-top-left-radius:5px;
-  border-top-right-radius:5px;
-  border-bottom-left-radius:5px;
-  border-bottom-right-radius:5px;
-  box-shadow: 3px 4px 0px 0px rgba(126, 141, 155, 1);
-  text-shadow: 0px 1px 0px #528ecc;
-  background:linear-gradient(#79bbff, #378de5);
+button {
+    font-size: 15px;
+    font-family: Arial;
+    width: 140px;
+    height: 50px;
+    border-width: 1px;
+    color: #fff;
+    border-color: #337bc4;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 3px 4px 0px 0px rgba(126, 141, 155, 1);
+    text-shadow: 0px 1px 0px #528ecc;
+    background: linear-gradient(#79bbff, #378de5);
 }
 
 button:hover {
-  background: linear-gradient(#378de5, #79bbff);
+    background: linear-gradient(#378de5, #79bbff);
 }
 
 
-main{
+main {
     height: 80vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+
+footer{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.boxContador, .boxCronometo{
+    width: 30%;
+    height: 40vh;
+    display: flex;
+     flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; 
+    border: solid black;
 }
