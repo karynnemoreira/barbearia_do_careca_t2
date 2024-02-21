@@ -15,7 +15,7 @@ function Footer() {
     const Mensagem = () => {
         setTimeout(() => {
             alert("Você recebeu 1 milhão")
-        }, 4000)
+        }, 5000)
     }
 
 //Exemplo 2 criando um contador usando o setTimeout
@@ -35,24 +35,33 @@ setTimeout(()=>{
 }
 
 
-//SETINTERVAL É UM MÉTODO QUE PERMITE EXECUTAR REPETIDADEMENTE UM BLOCO DE CÓDIGOS, A CADA INTERVALOR DE TEMPO. EXEMPLO: DE 3 EM 3 SEGUNDOS FAÇA TAL COISA. 
+//SETINTERVAL É UM MÉTODO QUE PERMITE EXECUTAR REPETIDADEMENTE UM BLOCO DE CÓDIGOS, A CADA INTERVALO DE TEMPO. EXEMPLO: DE 3 EM 3 SEGUNDOS FAÇA TAL COISA. 
 
 //SINTAXE SETINTERVAL
 // setInterval(()=>{
 //     o que quero fazer
 // }, tempo)
 
+//     estado  setEstado
+const [number, setNumber] = useState(0)
 
-const [numero2, setNumero2] = useState(0)
 
-const Start = () => {
-
-setInterval(()=>{
-    //setNumero((nomedoParametro)=> execução)
-   setNumero2((numero2) => numero2 + 1)
-}, 1000)
-
+function Start(){
+    setInterval(()=>{
+        setNumber((number) => number + 1) //retorne o seu valor + 1 
+    },1000)//retorne 1 valor de 1 em 1 segundo
 }
+
+
+//-------------Criando a função start utilizando uma arrow function--------------
+// const Start =()=>{
+//     setInterval(()=>{
+//         setNumber((number) => number + 1) //retorne o seu valor + 1 
+//     },1000)//retorne 1 valor de 1 em 1 segundo
+// }
+//---------------------------------------------------------------------------------
+
+
 
     return (
         <footer>
@@ -69,7 +78,7 @@ setInterval(()=>{
 
             <div className="boxCronometo">
                 <h2>Cronômetro</h2>
-                <h3> {numero2} </h3>
+                <h3> {number} </h3>
                 <button onClick={Start}>Start</button>
                 <button>Stop</button>
                 <button>Clear</button>
